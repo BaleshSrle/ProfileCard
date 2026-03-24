@@ -13,8 +13,7 @@
     <meta name="MSThemeCompatible" content="yes">
     <link rel="shortlink" href="https://bit.ly/4oOAVb1">
     <title>.::Baleshevich Srdjan::-::Social Card::.</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"
-        onerror=" this.src ='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js'"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -153,8 +152,11 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             //const link = document.getElementsByTagName("link");
+            const UrlCDN = ["https://cdn.jsdelivr.net/", "https://cdnjs.cloudflare.com/"];
+            const BadgesUrl = ["https://img.shields.io/", "https://badgen.net/"];
             const img = document.images;
             const links = document.links;
+            const script = document.scripts[0];
             const solidIcons = document.querySelectorAll("i.fa-solid");
             const brandIcons = document.querySelectorAll("span.fa-brands");
             const slicedIcons = Array.prototype.slice.call(solidIcons, -4, -1);
@@ -164,18 +166,18 @@
                     location.reload();
                 });
             } */
-            img.item(2).src = "https://img.shields.io/badge/Volkswagen-Golf_Typ19E_1.6_TD_CL_(1991)-151f5d?style=flat-square&logo=volkswagen&logoColor=white";
-            img.item(2).onerror = function () { this.src = "https://badgen.net/static/Volkswagen/Golf%20Typ19E%201.6%20TD%20CL%20(1991)/0096d6"; }
-            img.item(3).src = "https://img.shields.io/badge/Fujitsu-Lifebook_S751-ff0000?style=flat-square&logo=fujitsu&logoColor=white";
-            img.item(3).onerror = function () { this.src = "https://badgen.net/static/Fujitsu/Lifebook%20S751/ff0000"; }
-            img.item(4).src = "https://img.shields.io/badge/HP_Compaq-cd7100_Base_Model_Small_Form_Factor-0096d6?style=flat-square&logo=hp&logoColor=white";
-            img.item(4).onerror = function () { this.src = "https://badgen.net/static/HP%20Compaq/cd-7100%20Base%20Model%20Small%20Form%20Factor/0096d6"; }
-            img.item(5).src = "https://img.shields.io/github/v/release/twbs/bootstrap?filter=v5.3.*&logo=bootstrap&logoColor=white&label=Bootstrap&color=7952b3&cacheSeconds=300";
-            img.item(5).onerror = function () { this.src = "https://badgen.net/jsdelivr/v/npm/bootstrap@5?color=7952b3&label=Bootstrap"; }
-            img.item(6).src = "https://img.shields.io/cdnjs/v/font-awesome?logo=fontawesome&logoColor=white&label=Font%20Awesome&color=528dd7&cacheSeconds=300";
-            img.item(6).onerror = function () { this.src = "https://badgen.net/npm/v/@fortawesome/fontawesome-free?label=Font%20Awesome&color=538dd7"; }
-            img.item(7).src = "https://img.shields.io/github/v/release/microsoft/vscode?logo=visualstudiocode&label=Visual%20Studio%20Code&color=007acc&cacheSeconds=300";
-            img.item(7).onerror = function () { this.src = "https://badgen.net/github/tag/microsoft/vscode?label=Visual%20Studio%20Code&color=007acc"; }
+            img.item(2).src = BadgesUrl[0] + "badge/Volkswagen-Golf_Typ19E_1.6_TD_CL_(1991)-151f5d?style=flat-square&logo=volkswagen&logoColor=white";
+            img.item(2).onerror = function () { this.src = BadgesUrl[1] + "static/Volkswagen/Golf%20Typ19E%201.6%20TD%20CL%20(1991)/0096d6"; }
+            img.item(3).src = BadgesUrl[0] + "badge/Fujitsu-Lifebook_S751-ff0000?style=flat-square&logo=fujitsu&logoColor=white";
+            img.item(3).onerror = function () { this.src = BadgesUrl[1] + "static/Fujitsu/Lifebook%20S751/ff0000"; }
+            img.item(4).src = BadgesUrl[0] + "badge/HP_Compaq-cd7100_Base_Model_Small_Form_Factor-0096d6?style=flat-square&logo=hp&logoColor=white";
+            img.item(4).onerror = function () { this.src = BadgesUrl[1] + "static/HP%20Compaq/cd-7100%20Base%20Model%20Small%20Form%20Factor/0096d6"; }
+            img.item(5).src = BadgesUrl[0] + "github/v/release/twbs/bootstrap?filter=v5.3.*&logo=bootstrap&logoColor=white&label=Bootstrap&color=7952b3&cacheSeconds=300";
+            img.item(5).onerror = function () { this.src = BadgesUrl[1] + "jsdelivr/v/npm/bootstrap@5?color=7952b3&label=Bootstrap"; }
+            img.item(6).src = BadgesUrl[0] + "cdnjs/v/font-awesome?logo=fontawesome&logoColor=white&label=Font%20Awesome&color=528dd7&cacheSeconds=300";
+            img.item(6).onerror = function () { this.src = BadgesUrl[1] + "npm/v/@fortawesome/fontawesome-free?label=Font%20Awesome&color=538dd7"; }
+            img.item(7).src = BadgesUrl[0] + "github/v/release/microsoft/vscode?logo=visualstudiocode&label=Visual%20Studio%20Code&color=007acc&cacheSeconds=300";
+            img.item(7).onerror = function () { this.src = BadgesUrl[1] + "github/tag/microsoft/vscode?label=Visual%20Studio%20Code&color=007acc"; }
             /* for (i = 0; i < Math.min(2, img.length); i++) {
                 img[i].classList.add("card-img");
             } */
@@ -223,10 +225,11 @@
                 }
                 document.head.appendChild(link);
             };
-            loadCSS("https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css", "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css");
-            loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7/css/all.min.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css");
-            loadCSS("https://cdn.jsdelivr.net/npm/bootstrap-social@5/bootstrap-social.min.css", "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css");
-            document.scripts[0].crossOrigin = "anonymous";
+            loadCSS(UrlCDN[0] + "npm/bootstrap@5.3/dist/css/bootstrap.min.css", UrlCDN[1]+"ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css");
+            loadCSS(UrlCDN[0] + "npm/@fortawesome/fontawesome-free@7/css/all.min.css", UrlCDN[1]+"ajax/libs/font-awesome/7.0.1/css/all.min.css");
+            loadCSS(UrlCDN[0] + "npm/bootstrap-social@5/bootstrap-social.min.css", UrlCDN[1]+"ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css");
+            script.crossOrigin = "anonymous";
+            script.onerror = function () { this.src = UrlCDN[1]+"ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"; }
             document.getElementById("year").innerText = new Date().getFullYear();
             document.normalize();
         });
